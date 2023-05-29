@@ -40,3 +40,44 @@
 .btn-secondary > a {
   color: #3878c2;
 }
+
+/* Register page */
+.auth {
+  width: 100%;
+}
+
+.authentication-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #3878c2;
+  padding: 15px 10px;
+}
+
+.authentication-header p {
+  color: white;
+}
+
+.input-container {
+  padding: 0 10px;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 0;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid rgb(202, 201, 201);
+}
+
+.field input::placeholder {
+  color: rgb(202, 201, 201);
+}
+
+.next-button {
+  background: none;
+  outline: 0;
+  border: 0;
+  color: white;
+}
