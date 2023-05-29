@@ -1,3 +1,7 @@
+.container {
+  padding: 0 15px;
+}
+
 .welcome {
   display: flex;
   flex-direction: column;
@@ -80,4 +84,14 @@
   outline: 0;
   border: 0;
   color: white;
+}
+
+.forgot {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.forgot > a {
+  color: black;
 }
