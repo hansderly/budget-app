@@ -4,9 +4,11 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
   <div class="authentication-header">
+  <%= link_to :back do %>
     <span class="material-symbols-outlined">
     arrow_back
     </span>
+    <% end %>
 
     <p>LOGIN</p>
 
