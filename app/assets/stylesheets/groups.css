@@ -1,0 +1,19 @@
+.groups-wrapper {
+  height: 100vh;
+}
+
+.new-group-wrapper {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #5fb523;
+  width: 558px;
+}
+
+.new-group-btn {
+  font-size: 18px;
+  padding: 30px 0;
+  color: white;
+}
