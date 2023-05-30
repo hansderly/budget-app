@@ -1,0 +1,131 @@
+.container {
+  padding: 0 15px;
+}
+
+.alert-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.alert {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.errors-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.errors {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  max-height: 500px;
+}
+
+.logo {
+  font-size: 35px;
+  font-family: 'Lobster', cursive;
+}
+
+.btn-primary {
+  background-color: #3878c2;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 15px 0;
+}
+
+.btn-primary > a {
+  color: #fff;
+}
+
+.btn-secondary {
+  background: none;
+  width: 100%;
+  outline: 0;
+  border: 0;
+}
+
+.btn-secondary > a {
+  color: #3878c2;
+}
+
+/* Register page */
+.auth {
+  width: 100%;
+  background-color: white;
+  padding-bottom: 25px;
+}
+
+.authentication-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background: linear-gradient(to top, rgb(42, 99, 165), rgb(58, 124, 196));
+  padding: 30px 10px;
+}
+
+.authentication-header p {
+  color: white;
+}
+
+.input-container {
+  padding: 0 10px;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 0;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid rgb(202, 201, 201);
+}
+
+.field input::placeholder {
+  color: rgb(202, 201, 201);
+}
+
+.next-button {
+  background: none;
+  outline: 0;
+  border: 0;
+  color: white;
+}
+
+.forgot {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.forgot > a {
+  color: black;
+}
