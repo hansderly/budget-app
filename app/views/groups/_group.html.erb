@@ -1,12 +1,21 @@
-<div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
-
-  <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
-  </p>
-
+<%= link_to group do %>
+<div class="group-wrapper">
+  <div class="group" id="<%= dom_id group %>">
+    <div class="group-icon">
+      <img class="icon" src="<%= group.icon %>" alt="" srcset="">
+    </div>
+    <div class="group-infos">
+      <div>
+        <p> <%= group.name %> </p>
+        <p> <%= group.created_at.strftime('%b %d, %Y')%> </p>
+      </div>
+      <div>
+        <p>$<%= group.sum_group %> </p>
+      </div>
+    </div>
+    <div>
+    </div>
+  </div>
 </div>
+
+  <% end %>
