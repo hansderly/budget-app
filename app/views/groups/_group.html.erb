@@ -5,11 +5,11 @@
       <img class="icon" src="<%= group.icon %>" alt="" srcset="">
     </div>
     <div class="group-infos">
-      <div>
-        <p> <%= group.name %> </p>
-        <p> <%= group.created_at.strftime('%b %d, %Y')%> </p>
+      <div class="name-date">
+        <p class="name"> <%= group.name %> </p>
+        <p class="date"> <%= group.created_at.strftime('%b %d, %Y')%> </p>
       </div>
-      <div>
+      <div class="sum">
         <p>$<%= group.sum_group %> </p>
       </div>
     </div>
