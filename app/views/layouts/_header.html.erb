@@ -1,0 +1,16 @@
+  <div class="header">
+  <%= link_to :back do %>
+    <span class="material-symbols-outlined">
+    menu
+    </span>
+    <% end %>
+
+    <p> <%= title %> </p>
+
+
+    <div class="actions">
+      <% if user_signed_in? %>
+        <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
+      <% end %>
+    </div>
+  </div>
