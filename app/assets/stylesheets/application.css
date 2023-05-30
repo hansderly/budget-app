@@ -22,6 +22,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  max-width: 600px;
+  margin-inline: auto;
 }
 
 li {

@@ -17,6 +17,12 @@
   </div>
 
   <div class="input-container">
+    <% if alert.present? %>
+  <div class="alert-wrapper">
+      <p class="alert" id="alert"><%= alert %></p>
+  </div>
+    <% end %>
+
   <div class="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
   </div>
