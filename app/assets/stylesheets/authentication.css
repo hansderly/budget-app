@@ -6,9 +6,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .alert {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.errors-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.errors {
   background-color: #f8d7da;
   color: #721c24;
   border-color: #f5c6cb;

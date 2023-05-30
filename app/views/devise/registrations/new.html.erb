@@ -14,9 +14,17 @@
     </div>
   </div>
 
-    <%= render "devise/shared/error_messages", resource: resource %>
-
     <div class="input-container">
+
+      <% if resource.errors.any? %>
+        <div class="errors-wrapper" id="error_explanation">
+          <ul class="errors">
+            <% resource.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
     <div class="field">
       <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full name" %>
