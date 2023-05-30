@@ -80,6 +80,8 @@
 /* Register page */
 .auth {
   width: 100%;
+  background-color: white;
+  padding-bottom: 25px;
 }
 
 .authentication-header {
@@ -87,8 +89,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  background-color: #3878c2;
-  padding: 15px 10px;
+  background: linear-gradient(to top, rgb(42, 99, 165), rgb(58, 124, 196));
+  padding: 30px 10px;
 }
 
 .authentication-header p {
