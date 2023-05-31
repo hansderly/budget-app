@@ -48,3 +48,18 @@
   font-weight: 500;
   margin-top: 10px;
 }
+
+/* -------------------------------------- */
+.action-group {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-delete {
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  margin-right: 10px;
+}
