@@ -12,6 +12,23 @@
     <div class="action-group">
       <%= button_to "Destroy this group", @group, method: :delete, class: 'btn-delete' %>
     </div>
+
+    <div>
+      <h3>Entities</h3>
+      <ul>
+        <% @group.entities.each do |entity| %>
+          <li class="card-entity">
+          <div>
+            <%= entity.name %>
+            <%= entity.amount%>
+          </div>
+          <div class="date-entity">
+            <p class="date"> <%= entity.created_at.strftime('%b %d, %Y')%> </p>
+          </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 
   <div class="new-group-wrapper">
