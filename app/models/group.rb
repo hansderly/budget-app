@@ -8,7 +8,4 @@ class Group < ApplicationRecord
     entities.map(&:amount).reduce(:+)&.round(2) || 0
   end
 
-  def sum_all_group
-    Group.includes(:entities).sum { |group| group.entities.sum(&:amount) } || 0
-  end
 end

@@ -1,5 +1,9 @@
 <section class="groups-wrapper">
   <%= render 'layouts/header', title: 'Group' %>
+  <div class="total-amount">
+    <p>Total:</p>
+    <p>$ <%= @sum_all_group %></p>
+  </div>
 
   <div id="groups">
     <% @groups.each do |group| %>
