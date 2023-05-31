@@ -1,10 +1,37 @@
-<p style="color: green"><%= notice %></p>
+<section>
+  <%= render 'layouts/header', title: @group.name %>
+  <div>
+    <p style="color: green"><%= notice %></p>
 
-<%= render @group %>
+    <%= render @group %>
 
-<div>
-  <%= link_to "Edit this group", edit_group_path(@group) %> |
-  <%= link_to "Back to groups", groups_path %>
+    <div class="action-group">
+      <%= button_to "Destroy this group", @group, method: :delete, class: 'btn-delete' %>
+    </div>
 
-  <%= button_to "Destroy this group", @group, method: :delete %>
-</div>
+    <div>
+      <h3>Entities</h3>
+      <ul>
+        <% @group.entities.each do |entity| %>
+          <li class="card-entity">
+          <div class="card-infos">
+            <p>
+              <%= entity.name %>
+            </p>
+            <p>
+              <%= entity.amount%>
+            </p>
+          </div>
+          <div class="date-entity">
+            <p class="date"> <%= entity.created_at.strftime('%b %d, %Y')%> </p>
+          </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="new-group-wrapper">
+    <%= link_to "Add Entity" , new_entity_path, class: 'new-group-btn' %>
+  </div>
+</section>

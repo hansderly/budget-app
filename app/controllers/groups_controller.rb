@@ -4,10 +4,14 @@ class GroupsController < ApplicationController
   # GET /groups or /groups.json
   def index
     @groups = Group.all
+
+    @sum_all_group = Group.includes(:entities).sum { |group| group.entities.sum(&:amount) } || 0
   end
 
   # GET /groups/1 or /groups/1.json
-  def show; end
+  def show
+    @entities = EntitiesGroup.includes(:entity).where(group_id: params[:id]).map(&:entity)
+  end
 
   # GET /groups/new
   def new
@@ -19,7 +23,7 @@ class GroupsController < ApplicationController
 
   # POST /groups or /groups.json
   def create
-    @group = Group.new(group_params)
+    @group = current_user.groups.build(group_params)
 
     respond_to do |format|
       if @group.save
