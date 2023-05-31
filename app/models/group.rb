@@ -7,5 +7,4 @@ class Group < ApplicationRecord
   def sum_group
     entities.map(&:amount).reduce(:+)&.round(2) || 0
   end
-
 end
