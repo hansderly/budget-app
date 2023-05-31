@@ -1,14 +1,20 @@
 <section>
-  <p style="color: green"><%= notice %></p>
+  <div>
+    <p style="color: green"><%= notice %></p>
     <%= link_to groups_path do %>
       <span class="material-symbols-outlined">
         arrow_back
       </span>
     <% end %>
 
-  <%= render @group %>
+    <%= render @group %>
 
-  <div class="action-group">
-    <%= button_to "Destroy this group", @group, method: :delete, class: 'btn-delete' %>
+    <div class="action-group">
+      <%= button_to "Destroy this group", @group, method: :delete, class: 'btn-delete' %>
+    </div>
+  </div>
+
+  <div class="new-group-wrapper">
+    <%= link_to "Add Entity" , new_entity_path, class: 'new-group-btn' %>
   </div>
 </section>
