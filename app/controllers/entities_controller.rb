@@ -19,7 +19,7 @@ class EntitiesController < ApplicationController
 
   # POST /entities or /entities.json
   def create
-    @entity = Entity.new(entity_params)
+    @entity = current_user.entities.build(entity_params)
 
     respond_to do |format|
       if @entity.save
@@ -64,6 +64,6 @@ class EntitiesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def entity_params
-    params.require(:entity).permit(:user_id, :name, :amount)
+    params.require(:entity).permit(:user_id, :name, :amount, group_ids: [])
   end
 end

@@ -7,7 +7,9 @@ class GroupsController < ApplicationController
   end
 
   # GET /groups/1 or /groups/1.json
-  def show; end
+  def show
+    @entities = EntitiesGroup.where(group_id: params[:id]).map(&:entity)
+  end
 
   # GET /groups/new
   def new
