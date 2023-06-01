@@ -12,18 +12,20 @@
   <% end %>
 
   <div>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, {id: "name"} %>
   </div>
 
   <div>
-    <%= form.text_field :amount %>
+    <%= form.text_field :amount, {id: "amount"} %>
   </div>
 
   <div>
-    <%= form.collection_select :group_ids, Group.all, :id, :name, {}, :multiple => true %>
+    <%= form.collection_select :group_ids, Group.all, :id, :name, { id: "select_entity" }, :multiple => true %>
   </div>
 
   <div>
+  <button>
     <%= form.submit %>
+  </button>
   </div>
 <% end %>
