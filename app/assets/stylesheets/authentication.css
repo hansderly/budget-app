@@ -120,6 +120,15 @@
   color: rgb(202, 201, 201);
 }
 
+.field select {
+  width: 100%;
+  padding: 10px 0;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid rgb(202, 201, 201);
+  margin: 10px 0;
+}
+
 .next-button {
   background: none;
   outline: 0;

@@ -1,25 +1,24 @@
 <%= form_with(model: entity) do |form| %>
-  <% if entity.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
 
-      <ul>
-        <% entity.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <% if entity.errors.any? %>
+        <div class="errors-wrapper" id="error_explanation">
+          <ul class="errors">
+            <% entity.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-  <div>
-    <%= form.text_field :name, {id: "name"} %>
+  <div class="field">
+    <%= form.text_field :name, {id: "name", placeholder: 'Name' } %>
   </div>
 
-  <div>
-    <%= form.text_field :amount, {id: "amount"} %>
+  <div class="field">
+    <%= form.text_field :amount, {id: "amount", placeholder: 'Amount' } %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.collection_select :group_ids, Group.all, :id, :name, { id: "select_entity" }, :multiple => true %>
   </div>
 
