@@ -97,6 +97,13 @@
   color: white;
 }
 
+.btn-auth {
+  background: none;
+  outline: 0;
+  border: 0;
+  color: white;
+}
+
 .input-container {
   padding: 0 10px;
 }
