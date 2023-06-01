@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Group, type: :system do
-
   describe 'Group index' do
     let(:user) do
       User.create(id: 1,
@@ -9,8 +8,7 @@ RSpec.describe Group, type: :system do
                   created_at: '2023-05-31 12:14:22.327820000 +0000',
                   updated_at: '2023-05-31 12:14:22.327820000 +0000',
                   email: 'test@gmail.com',
-                  password: '111111',
-                  )
+                  password: '111111')
     end
 
     let(:group) do
@@ -45,6 +43,5 @@ RSpec.describe Group, type: :system do
       visit group_path(group)
       expect(page).to have_content 'Add Entity'
     end
-
   end
 end
