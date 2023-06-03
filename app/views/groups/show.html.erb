@@ -1,13 +1,7 @@
 <section>
   <%= render 'layouts/header', title: @group.name %>
   <div>
-    <p style="color: green"><%= notice %></p>
-
     <%= render @group %>
-
-    <div class="action-group">
-      <%= button_to "Destroy this group", @group, method: :delete, class: 'btn-delete' %>
-    </div>
 
     <div>
       <h3>Entities</h3>
@@ -31,9 +25,7 @@
     </div>
   </div>
 
-  <div class="new-group-wrapper">
-  <button>
-    <%= link_to "Add Entity" , new_entity_path, class: 'new-group-btn' %>
+  <button class="new-group-wrapper">
+    <%= link_to "Add Entity" , new_group_entity_path(@group), class: 'new-group-btn' %>
   </button>
-  </div>
 </section>

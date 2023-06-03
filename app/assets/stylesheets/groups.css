@@ -6,6 +6,7 @@
   display: flex;
   position: absolute;
   bottom: 0;
+  border: none;
   justify-content: center;
   align-items: center;
   background-color: #5fb523;
