@@ -6,25 +6,25 @@
 
 # 📗 Table of Contents
 
--   [📗 Table of Contents](#-table-of-contents)
--   [📖 Budget App ](#-budget-app-)
-    -   [🛠 Built With ](#-built-with-)
-        -   [Tech Stack ](#tech-stack-)
-        -   [Key Features ](#key-features-)
-    -   [🚀 Live Demo ](#-live-demo-)
-    -   [💻 Getting Started ](#-getting-started-)
-        -   [Prerequisites](#prerequisites)
-        -   [Setup](#setup)
-        -   [Install](#install)
-        -   [💾 Database](#-database)
-        -   [Usage](#usage)
-        -   [Run tests](#run-tests)
-    -   [👥 Authors ](#-authors-)
-    -   [🔭 Future Features ](#-future-features-)
-    -   [🤝 Contributing ](#-contributing-)
-    -   [⭐️ Show your support ](#️-show-your-support-)
-    -   [🙏 Acknowledgments ](#-acknowledgments-)
-    -   [📝 License ](#-license-)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Budget App ](#-budget-app-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [💾 Database](#-database)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 # 📖 Budget App <a name="about-project"></a>
 
@@ -65,11 +65,11 @@
 
 > Live demo URL
 
--   [Live Demo]()
+-   [Live Demo](https://budgeto-dswq.onrender.com)
 
 > Live demo presentation
 
--   [Live presentation]()
+-   [Live presentation](https://www.loom.com/share/14052325353c475688a42299f39a6b7c)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
