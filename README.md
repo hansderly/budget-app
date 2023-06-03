@@ -63,7 +63,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Live demo URL
+> Live application demo URL
 
 -   [Live Demo](https://budgeto-dswq.onrender.com)
 

@@ -34,14 +34,22 @@ RSpec.describe Group, type: :system do
       expect(page).to have_content 'Group'
     end
 
-    it 'shows the group name when click on a specific group' do
-      visit group_path(group)
-      expect(page).to have_content 'Group 1'
+    it 'Show total' do
+      visit root_path
+      click_button 'LOGIN'
+      fill_in 'Email', with: 'test@gmail.com'
+      fill_in 'Password', with: '111111'
+      click_button 'Log In'
+      expect(page).to have_content 'Total'
     end
 
-    it 'show add entity button when click on a specific group' do
-      visit group_path(group)
-      expect(page).to have_content 'Add Entity'
+    it 'Show total value' do
+      visit root_path
+      click_button 'LOGIN'
+      fill_in 'Email', with: 'test@gmail.com'
+      fill_in 'Password', with: '111111'
+      click_button 'Log In'
+      expect(page).to have_content '$0'
     end
   end
 end
