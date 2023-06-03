@@ -1,0 +1,47 @@
+<section class="auth">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+  <div class="authentication-header">
+
+  <%= link_to root_path do %>
+    <span class="material-symbols-outlined">
+    arrow_back
+    </span>
+    <% end %>
+
+    <p>Register</p>
+
+
+    <div class="actions">
+    <button class="btn-auth">
+      <%= f.submit "Next", class: "next-button" %>
+    </button>
+    </div>
+  </div>
+
+    <div class="input-container">
+
+      <% if resource.errors.any? %>
+        <div class="errors-wrapper" id="error_explanation">
+          <ul class="errors">
+            <% resource.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+    <div class="field">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full name" %>
+    </div>
+
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+    </div>
+    </div>
+  <% end %>
+</section>

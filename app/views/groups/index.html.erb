@@ -1,0 +1,17 @@
+<section class="groups-wrapper">
+  <%= render 'layouts/header', title: 'Group', routes: groups_path %>
+  <div class="total-amount">
+    <p>Total:</p>
+    <p>$ <%= @sum_all_group %></p>
+  </div>
+
+  <div id="groups">
+    <% @groups.each do |group| %>
+      <%= render group %>
+    <% end %>
+  </div>
+
+  <div class="new-group-wrapper">
+    <%= link_to "New group", new_group_path, class: 'new-group-btn' %>
+  </div>
+</section>

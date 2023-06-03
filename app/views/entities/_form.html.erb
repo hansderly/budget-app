@@ -1,0 +1,30 @@
+<%= form_with(model: [@group, @entity]) do |form| %>
+
+      <% if entity.errors.any? %>
+        <div class="errors-wrapper" id="error_explanation">
+          <ul class="errors">
+            <% entity.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+  <div class="field">
+    <%= form.text_field :name, {id: "name", placeholder: 'Name' } %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :amount, {id: "amount", placeholder: 'Amount' } %>
+  </div>
+
+  <div class="field">
+    <%= form.collection_select :group_ids, Group.all, :id, :name, { id: "select_entity" }, :multiple => true %>
+  </div>
+
+  <div>
+  <button class="btn-add-wrapper">
+    <%= form.submit class: 'btn-add' %>
+  </button>
+  </div>
+<% end %>

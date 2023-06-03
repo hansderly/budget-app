@@ -1,0 +1,31 @@
+<section>
+  <%= render 'layouts/header', title: @group.name, routes: groups_path %>
+  <div>
+    <%= render @group %>
+
+    <div>
+      <h3>Entities</h3>
+      <ul>
+        <% @group.entities.each do |entity| %>
+          <li class="card-entity">
+          <div class="card-infos">
+            <p>
+              <%= entity.name %>
+            </p>
+            <p>
+              <%= entity.amount%>
+            </p>
+          </div>
+          <div class="date-entity">
+            <p class="date"> <%= entity.created_at.strftime('%b %d, %Y')%> </p>
+          </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <button class="new-group-wrapper">
+    <%= link_to "Add Entity" , new_group_entity_path(@group), class: 'new-group-btn' %>
+  </button>
+</section>

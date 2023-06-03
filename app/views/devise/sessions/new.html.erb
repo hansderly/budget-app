@@ -1,0 +1,45 @@
+<section class="auth">
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="authentication-header">
+  <%= link_to root_path do %>
+    <span class="material-symbols-outlined">
+    arrow_back
+    </span>
+    <% end %>
+
+    <p>LOGIN</p>
+
+
+    <div class="actions">
+    <button class="btn-auth">
+      <%= f.submit "Log In", class: "next-button" %>
+    </button>
+    </div>
+  </div>
+
+  <div class="input-container">
+    <% if alert.present? %>
+  <div class="alert-wrapper">
+      <p class="alert" id="alert"><%= alert %></p>
+  </div>
+    <% end %>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+  </div>
+  </div>
+
+<% end %>
+
+  <div class="forgot">
+    <%= render "devise/shared/links" %>
+  </div>
+
+</section>
