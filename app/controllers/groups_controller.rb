@@ -3,14 +3,17 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    @groups = Group.all
+    @groups = Group.where(user: current_user).order(created_at: :desc).includes(:entities)
 
-    @sum_all_group = Group.includes(:entities).sum { |group| group.entities.sum(&:amount) } || 0
+    @sum_all_group = Group.where(user: current_user).includes(:entities).sum do |group|
+      group.entities.sum(&:amount)
+    end || 0
   end
 
   # GET /groups/1 or /groups/1.json
   def show
-    @entities = EntitiesGroup.includes(:entity).where(group_id: params[:id]).map(&:entity)
+    # @entities = EntitiesGroup.includes(:entity).where(group_id: params[:id]).map(&:entity)
+    @entities = EntitiesGroup.where(user_id: current_user.id, group_id: @group.id).order(created_at: :desc)
   end
 
   # GET /groups/new

@@ -11,8 +11,8 @@ class EntitiesController < ApplicationController
 
   # GET /entities/new
   def new
-    @entity = current_user.entities.build
     @group = Group.find(params[:group_id])
+    @entity = current_user.entities.build
   end
 
   # GET /entities/1/edit
@@ -22,6 +22,7 @@ class EntitiesController < ApplicationController
   def create
     @entity = current_user.entities.build(entity_params)
     @group = Group.find(params[:group_id])
+    @group.entities << @entity
 
     respond_to do |format|
       if @entity.save
